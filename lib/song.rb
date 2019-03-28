@@ -1,6 +1,8 @@
 require_relative "../config/environment.rb"
 require 'active_support/inflector'
 
+
+
 class Song
 
 
@@ -15,6 +17,7 @@ class Song
 
     table_info = DB[:conn].execute(sql)
     column_names = []
+
     table_info.each do |row|
       column_names << row["name"]
     end
@@ -59,6 +62,3 @@ class Song
   end
 
 end
-
-
-
